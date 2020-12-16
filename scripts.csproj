@@ -51,6 +51,13 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="DeleteBackground.cs" />
+    <Compile Include="Dna.cs" />
+    <Compile Include="DScript.cs" />
+    <Compile Include="Kiai3d.cs" />
+    <Compile Include="Seed.cs" />
+    <Compile Include="Trying.cs" />
+  </ItemGroup>
   <ItemGroup />
 </Project>
