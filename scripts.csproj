@@ -52,10 +52,13 @@
   </Target>
   -->
   <ItemGroup>
+    <Compile Include="Background.cs" />
+    <Compile Include="CoolTHIngs.cs" />
     <Compile Include="DeleteBackground.cs" />
     <Compile Include="Dna.cs" />
     <Compile Include="DScript.cs" />
     <Compile Include="Kiai3d.cs" />
+    <Compile Include="Loading.cs" />
     <Compile Include="Seed.cs" />
     <Compile Include="Trying.cs" />
   </ItemGroup>

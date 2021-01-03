@@ -4,7 +4,7 @@ Script: "DeleteBackground"
 Config:
   Bg:
     Type: "System.String"
-    Value: "Bg.jpg"
+    Value: "main_visual_momoco-ex-pc.jpg"
   RandomSeed:
     Type: "System.Int32"
     Value: "0"

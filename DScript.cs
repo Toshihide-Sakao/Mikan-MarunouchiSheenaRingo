@@ -51,6 +51,7 @@ namespace StorybrewScripts
             }
             
             testSprite.GenerateCommands(null, 0, 3000, 0, false);
+            
         }
     }
 }

@@ -1,0 +1,20 @@
+﻿FormatVersion: 7
+Name: "Loading 1"
+Script: "Loading"
+Config:
+  startTime:
+    Type: "System.Int32"
+    Value: "19288"
+  endTime:
+    Type: "System.Int32"
+    Value: "26788"
+  RandomSeed:
+    Type: "System.Int32"
+    Value: "0"
+    DisplayName: "Random seed"
+Layers:
+  7f8e568bb36d4dada5259098d1eff7ae:
+    Name: ""
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
