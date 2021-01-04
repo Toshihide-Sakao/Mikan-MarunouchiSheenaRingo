@@ -4,13 +4,13 @@ Script: "Background"
 Config:
   BackgroundPath:
     Type: "System.String"
-    Value: ""
+    Value: "sb/dot.png"
   StartTime:
     Type: "System.Int32"
-    Value: "45002"
+    Value: "61743"
   EndTime:
     Type: "System.Int32"
-    Value: "62145"
+    Value: "70716"
   Opacity:
     Type: "System.Double"
     Value: "1"
@@ -19,7 +19,7 @@ Config:
     Value: "0"
     DisplayName: "Random seed"
 Layers:
-  c74e91988a77412bb4141b0b382866cd:
+  c6ecd154f49141f48f4d72881c131126:
     Name: ""
     OsbLayer: Background
     DiffSpecific: No

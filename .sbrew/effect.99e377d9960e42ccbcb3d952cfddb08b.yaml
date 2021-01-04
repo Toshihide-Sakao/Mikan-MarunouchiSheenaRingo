@@ -1,16 +1,16 @@
 ﻿FormatVersion: 7
-Name: "Loading 1"
+Name: "Loading 2"
 Script: "Loading"
 Config:
   startTime:
     Type: "System.Int32"
-    Value: "19288"
+    Value: "66431"
   endTime:
     Type: "System.Int32"
-    Value: "26788"
+    Value: "69645"
   kakukaku:
     Type: "System.Boolean"
-    Value: "False"
+    Value: "True"
   Glitch:
     Type: "System.Boolean"
     Value: "False"
@@ -19,7 +19,7 @@ Config:
     Value: "0"
     DisplayName: "Random seed"
 Layers:
-  7f8e568bb36d4dada5259098d1eff7ae:
+  263b61f38f8d49db98d12cf6b4e3048e:
     Name: ""
     OsbLayer: Background
     DiffSpecific: No

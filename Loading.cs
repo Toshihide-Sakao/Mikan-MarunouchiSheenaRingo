@@ -17,14 +17,42 @@ namespace StorybrewScripts
         [Configurable] public int startTime;
         [Configurable] public int endTime;
         public string dotPath = "sb/dot.png";
+        [Configurable] public bool kakukaku = false;
+        [Configurable] public bool Glitch = false;
 
         public override void Generate()
         {
+            double beatDuration = Beatmap.GetTimingPointAt((int)startTime).BeatDuration;
+
             var layer = GetLayer("");
 		    var boxSprites = generateBox(320, 240, 160, 20);
 
             var loadingBar = layer.CreateSprite(dotPath, OsbOrigin.CentreLeft, new Vector2(320 - 78, 240));
-            loadingBar.ScaleVec(OsbEasing.None, startTime, endTime, 0, 16, 156, 16);
+            if (kakukaku)
+            {
+                int kakutimes = 8;
+                int percentOfBar = 60;
+                float theThign = 156f/100f;
+                float perKaku = percentOfBar / kakutimes;
+                float progress = 0;
+                float time = startTime;
+
+                for (int i = 0; i < kakutimes; i++)
+                {
+                    float aaaaa = perKaku * theThign;
+                    loadingBar.ScaleVec(OsbEasing.None, time, time + 50, progress, 16, progress + aaaaa, 16);
+
+                    time += (float)beatDuration / 2;
+                    progress += aaaaa;
+                }
+
+                loadingBar.ScaleVec(OsbEasing.None, time, endTime, progress, 16, 156, 16);
+            }
+            else
+            {
+                loadingBar.ScaleVec(OsbEasing.None, startTime, endTime, 0, 16, 156, 16);
+            }
+            
             
         }
 

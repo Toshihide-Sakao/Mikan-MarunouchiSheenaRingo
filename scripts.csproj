@@ -53,13 +53,19 @@
   -->
   <ItemGroup>
     <Compile Include="Background.cs" />
+    <Compile Include="BallsCool.cs" />
     <Compile Include="CoolTHIngs.cs" />
     <Compile Include="DeleteBackground.cs" />
     <Compile Include="Dna.cs" />
     <Compile Include="DScript.cs" />
     <Compile Include="Kiai3d.cs" />
     <Compile Include="Loading.cs" />
+    <Compile Include="MovingBackground.cs" />
+    <Compile Include="Particles.cs" />
+    <Compile Include="ParticleToBeat.cs" />
     <Compile Include="Seed.cs" />
+    <Compile Include="Shirangana.cs" />
+    <Compile Include="Spectrum.cs" />
     <Compile Include="Trying.cs" />
   </ItemGroup>
   <ItemGroup />
