@@ -1,19 +1,25 @@
 ﻿FormatVersion: 7
-Name: "Shirangana 1"
-Script: "Shirangana"
+Name: "Loading 3"
+Script: "Loading"
 Config:
   startTime:
     Type: "System.Int32"
-    Value: "62144"
+    Value: "109287"
   endTime:
     Type: "System.Int32"
-    Value: "70716"
+    Value: "112501"
+  kakukaku:
+    Type: "System.Boolean"
+    Value: "True"
+  Glitch:
+    Type: "System.Boolean"
+    Value: "False"
   RandomSeed:
     Type: "System.Int32"
     Value: "0"
     DisplayName: "Random seed"
 Layers:
-  e9b25822e5824c93a9193e256b8b737a:
+  4d1cb9d69e6e404491af08f0959a5c58:
     Name: ""
     OsbLayer: Background
     DiffSpecific: No

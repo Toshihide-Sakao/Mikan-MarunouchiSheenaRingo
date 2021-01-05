@@ -1,19 +1,22 @@
 ﻿FormatVersion: 7
-Name: "Shirangana 1"
-Script: "Shirangana"
+Name: "ParticleToBeat 3"
+Script: "ParticleToBeat"
 Config:
   startTime:
     Type: "System.Int32"
-    Value: "62144"
+    Value: "141430"
   endTime:
     Type: "System.Int32"
-    Value: "70716"
+    Value: "175716"
+  ballPath:
+    Type: "System.String"
+    Value: "sb/fadeBall.png"
   RandomSeed:
     Type: "System.Int32"
     Value: "0"
     DisplayName: "Random seed"
 Layers:
-  e9b25822e5824c93a9193e256b8b737a:
+  af12cd5e02f04b68b6aba7b7b7acdee5:
     Name: ""
     OsbLayer: Background
     DiffSpecific: No
