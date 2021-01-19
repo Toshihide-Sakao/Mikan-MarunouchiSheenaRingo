@@ -63,10 +63,13 @@
     <Compile Include="MovingBackground.cs" />
     <Compile Include="Particles.cs" />
     <Compile Include="ParticleToBeat.cs" />
+    <Compile Include="SabiMae.cs" />
     <Compile Include="Seed.cs" />
     <Compile Include="Shirangana.cs" />
     <Compile Include="Spectrum.cs" />
+    <Compile Include="Transitions.cs" />
     <Compile Include="Trying.cs" />
+    <Compile Include="Waves.cs" />
   </ItemGroup>
   <ItemGroup />
 </Project>
