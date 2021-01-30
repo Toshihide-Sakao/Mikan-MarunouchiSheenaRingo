@@ -17,3 +17,8 @@ Layers:
     OsbLayer: Background
     DiffSpecific: No
     Visible: Yes
+  9d0ba0b7a8c04e9aa7163ecd698bcc9b:
+    Name: "LastBruh"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes

@@ -18,6 +18,7 @@ namespace StorybrewScripts
         string ballPath = "sb/ball.png";
         string roundRectPath = "sb/roundRect.png";
         string borderPath = "sb/border.png";
+        string circlePath = "sb/circle.png";
         int lastTime = 35359;
         int realStartTime = 31073;
         public override void Generate()
@@ -102,6 +103,9 @@ namespace StorybrewScripts
 
             //Next thing
             BruhNextThing(startTime);
+
+            // last thign
+            CreateLastThing(40716);
         }
 
         void BruhNextThing(int startTime)
@@ -241,12 +245,109 @@ namespace StorybrewScripts
             sq1.ScaleVec(OsbEasing.InQuint, 35894 + beatDuration * 4.5f, 35894 + beatDuration * 6.75f, sq1.ScaleAt(35894 + beatDuration * 4.5f).X, sq1.ScaleAt(35894 + beatDuration * 4.5f).Y, sq1.ScaleAt(35894 + beatDuration * 4.5f).X * 0.5f, sq1.ScaleAt(35894 + beatDuration * 4.5f).Y * 0.5f);
             sq2.ScaleVec(OsbEasing.InQuint, 35894 + beatDuration * 4.5f, 35894 + beatDuration * 6.75f, sq2.ScaleAt(35894 + beatDuration * 4.5f).X, sq2.ScaleAt(35894 + beatDuration * 4.5f).Y, sq2.ScaleAt(35894 + beatDuration * 4.5f).X * 0.5f, sq2.ScaleAt(35894 + beatDuration * 4.5f).Y * 0.5f);
 
+
+
             border.Rotate(OsbEasing.InQuint, 35894 + beatDuration * 4.5f, 35894 + beatDuration * 6.75f, border.RotationAt(35894 + beatDuration * 4.5f), border.RotationAt(35894 + beatDuration * 4.5f) - MathHelper.DegreesToRadians(70 + 180));
             border2.Rotate(OsbEasing.InQuint, 35894 + beatDuration * 4.5f, 35894 + beatDuration * 6.75f, border.RotationAt(35894 + beatDuration * 4.5f), border.RotationAt(35894 + beatDuration * 4.5f) - MathHelper.DegreesToRadians(70 + 180));
             border3.Rotate(OsbEasing.InQuint, 35894 + beatDuration * 4.5f, 35894 + beatDuration * 6.75f, border.RotationAt(35894 + beatDuration * 4.5f), border.RotationAt(35894 + beatDuration * 4.5f) - MathHelper.DegreesToRadians(70 + 180));
             sq1.Rotate(OsbEasing.InQuint, 35894 + beatDuration * 4.5f, 35894 + beatDuration * 6.75f, sq1.RotationAt(35894 + beatDuration * 4.5f), sq1.RotationAt(35894 + beatDuration * 4.5f) - MathHelper.DegreesToRadians(70 + 180));
             sq2.Rotate(OsbEasing.InQuint, 35894 + beatDuration * 4.5f, 35894 + beatDuration * 6.75f, sq2.RotationAt(35894 + beatDuration * 4.5f), sq2.RotationAt(35894 + beatDuration * 4.5f) - MathHelper.DegreesToRadians(70 + 180));
 
+        }
+
+        void CreateLastThing(int startTime)
+        {
+            double beatDuration = Beatmap.GetTimingPointAt((int)startTime).BeatDuration;
+            var layer = GetLayer("LastBruh");
+
+            var circle = new OsbSprite[3];
+
+            for (int i = 0; i < circle.Length; i++)
+            {
+                circle[i] = layer.CreateSprite(circlePath, OsbOrigin.Centre);
+
+                circle[i].Color(startTime, 45001, colorRGB(41, 41, 41), colorRGB(41, 41, 41));
+                circle[i].Scale(OsbEasing.OutBack, startTime, startTime + beatDuration, 0, 0.8f - (0.1f * i));
+
+                circle[i].Scale(OsbEasing.OutBack, startTime + beatDuration * (4 + 0.25f * i), startTime + beatDuration * (4.5f + 0.25f * i), 0.8f - (0.1f * i), (0.8f - (0.1f * i)) * 1.6f);
+                circle[i].Scale(OsbEasing.In, startTime + beatDuration * (4.25f + 7 * 0.25f), startTime + beatDuration * (4.25f + 7 * 0.25f + 1f), (0.8f - (0.1f * i)) * 1.6f, 0);
+                
+            }
+
+            for (int i = -1; i < 2; i++)
+            {
+                if (i != 0)
+                {
+                    for (int j = 0; j < 3; j++)
+                    {
+                        var sq = layer.CreateSprite(dotPath, OsbOrigin.CentreLeft);
+
+                        sq.MoveX(OsbEasing.Out, startTime + beatDuration, startTime + beatDuration * 2, 320 + i * -7 + i * 50 + i * 20 * j, 320 + i * 50 + i * 20 * j);
+                        sq.Color(startTime + beatDuration, startTime + beatDuration * 4, colorRGB(41, 41, 41), colorRGB(41, 41, 41));
+                        sq.Scale(startTime + beatDuration, 8);
+                        sq.Rotate(startTime + beatDuration, MathHelper.DegreesToRadians(45));
+                        sq.Fade(startTime + beatDuration, 0.8f);
+
+                        sq.MoveX(OsbEasing.InQuint, startTime + beatDuration * 2, startTime + beatDuration * 4, 320 + i * 50 + i * 20 * j, 320);
+                    }
+                }
+
+
+            }
+
+            for (int i = -1; i < 2; i++)
+            {
+                if (i != 0)
+                {
+                    var back = layer.CreateSprite(dotPath, OsbOrigin.CentreLeft, new Vector2(320 + 550 * i, 240 + 100 * i));
+                    if (i == 1)
+                    {
+                        back = layer.CreateSprite(dotPath, OsbOrigin.CentreRight, new Vector2(320 + 550 * i, 240 + 100 * i));
+                    }
+
+                    back.ScaleVec(startTime + beatDuration * 2, 300, 600);
+                    back.Color(startTime + beatDuration * 2, startTime + beatDuration * 8, colorRGB(41, 41, 41), colorRGB(41, 41, 41));
+
+                    back.Rotate(startTime + beatDuration * 2, startTime + beatDuration * 4, MathHelper.DegreesToRadians(20), MathHelper.DegreesToRadians(15));
+                    back.Fade(startTime + beatDuration * 2, startTime + beatDuration * 2.5f, 0, 0.8f);
+
+                    back.ScaleVec(OsbEasing.InCubic, startTime + beatDuration * (4.25f + 7 * 0.25f), startTime + beatDuration * (4.25f + 7 * 0.25f + 1f), 300, 600, 557.15f, 600);
+                }
+            }
+
+            List<Vector2> lastPosses = new List<Vector2>();
+            Splatter(new Vector2(320, 240), 0, startTime, beatDuration, lastPosses);
+
+            
+        }
+
+        void Splatter(Vector2 center, int e, int startTime, double beatDuration, List<Vector2> lastPosses)
+        {
+            if (e == 8)
+            {
+                lastPosses.Add(center);
+                return;
+            }
+            Vector2[] endYepPos = new Vector2[10];
+            var layer = GetLayer("");
+            for (int i = 0; i < 10 / (e+1) ; i++)
+            {
+                // 最初の円
+                var cir = layer.CreateSprite(ballPath, OsbOrigin.Centre);
+                // 終わりの場所
+                endYepPos[i] = new Vector2(center.X + Random(-40, 40), center.Y + Random(-40, 40));
+
+                cir.Move(OsbEasing.Out, startTime + beatDuration * (4 + e * 0.25f), startTime + beatDuration * (4.25f + e * 0.25f), center, endYepPos[i]);
+                cir.Color(startTime + beatDuration * (4 + e * 0.25f), Color4.FromHsv(new Vector4(0,0, 0f, 1)));
+                cir.Scale(startTime + beatDuration * (4 + e * 0.25f), Random(0.003f, 0.012f) * Math.Pow(0.9, e));
+                cir.Fade(startTime + beatDuration * (4 + e * 0.25f), 1 * Math.Pow(0.85, e));
+
+                if (e == 7)
+                {
+                    cir.Move(OsbEasing.InQuint, startTime + beatDuration * (4.25f + e * 0.25f), startTime + beatDuration * (4.25f + e * 0.25f + 1f), endYepPos[i], new Vector2(320, 240));
+                }
+                Splatter(endYepPos[i], e+1, startTime, beatDuration, lastPosses);
+            }
         }
 
         OsbSprite[] CreateHadou(double start, int amount, double timebetween, Color4 innerColor, Color4 outerColor, float x = 320, float y = 240)
