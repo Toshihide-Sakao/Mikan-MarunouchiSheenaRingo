@@ -56,8 +56,10 @@
     <Compile Include="BallsCool.cs" />
     <Compile Include="CoolTHIngs.cs" />
     <Compile Include="DeleteBackground.cs" />
+    <Compile Include="DistortLines.cs" />
     <Compile Include="Dna.cs" />
     <Compile Include="DScript.cs" />
+    <Compile Include="HitObjectHighlight.cs" />
     <Compile Include="Kiai3d.cs" />
     <Compile Include="Loading.cs" />
     <Compile Include="MovingBackground.cs" />

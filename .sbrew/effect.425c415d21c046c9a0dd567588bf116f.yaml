@@ -17,6 +17,11 @@ Layers:
     OsbLayer: Background
     DiffSpecific: No
     Visible: Yes
+  cc3898ebab2a420f9c7d95a4f1629ab8:
+    Name: "saisho"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
   9d0ba0b7a8c04e9aa7163ecd698bcc9b:
     Name: "LastBruh"
     OsbLayer: Background
