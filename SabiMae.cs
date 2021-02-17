@@ -26,8 +26,7 @@ namespace StorybrewScripts
             var layer = GetLayer("saisho");
             ThingBruh(realStartTime, layer);
 
-            var layer2 = GetLayer("");
-            ThingBruh(75001, layer2);
+            
 
         }
 
@@ -92,7 +91,7 @@ namespace StorybrewScripts
 
             Back.Color(startTime + beatDuration * 4, colorRGB(82, 200, 247));
 
-            var allHaouds = CreateHadou(startTime + beatDuration * 4, 3, beatDuration * 3 / 4, colorRGB(82, 200, 247), Color4.White);
+            var allHaouds = CreateHadou(layer, startTime + beatDuration * 4, 3, beatDuration * 3 / 4, colorRGB(82, 200, 247), Color4.White);
             FadeMultiOne(allHaouds, startTime + beatDuration * 6, 0);
 
             Back.Color(startTime + beatDuration * 6, colorRGB(247, 192, 82));
@@ -360,9 +359,8 @@ namespace StorybrewScripts
             }
         }
 
-        OsbSprite[] CreateHadou(double start, int amount, double timebetween, Color4 innerColor, Color4 outerColor, float x = 320, float y = 240)
+        OsbSprite[] CreateHadou(StoryboardLayer layer, double start, int amount, double timebetween, Color4 innerColor, Color4 outerColor, float x = 320, float y = 240)
         {
-            var layer = GetLayer("");
             int wierdiiii = amount;
             OsbSprite[] wholeArray = new OsbSprite[amount * 2];
             for (int i = 0; i < amount; i++)

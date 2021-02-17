@@ -1,0 +1,14 @@
+﻿FormatVersion: 7
+Name: "DudunSaigoSabiMae 1"
+Script: "DudunSaigoSabiMae"
+Config:
+  RandomSeed:
+    Type: "System.Int32"
+    Value: "0"
+    DisplayName: "Random seed"
+Layers:
+  80d461a59afd49acbdc8176757fc62f0:
+    Name: ""
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes

@@ -1,0 +1,9 @@
+﻿FormatVersion: 7
+Name: "Sabi2Mae 1"
+Script: "Sabi2Mae"
+Config:
+  RandomSeed:
+    Type: "System.Int32"
+    Value: "0"
+    DisplayName: "Random seed"
+Layers:
