@@ -62,32 +62,6 @@ namespace StorybrewScripts
 
                 sprite.GenerateCommands(null, startTime, endTime, 0, false);
             }
-
-            // scene.Generate(camera, GetLayer("okBruh"), startTime, endTime, beatDuration / 8);
         }
-
-        // public void GenerateStars()
-        // {
-            
-
-        //     for (int i = 0; i < 100; i++)
-        //     {
-        //         Vector2 xyposition = new Vector2(Random(3000), Random(3000));
-        //         var zposition = Random(-45000, -500);
-        //         var scale = new Vector2(5, 5);
-        //         var color = Color.White;
-
-        //         var sprite = new Sprite3d();
-        //         sprite.sprite = GetLayer("").CreateSprite("sb/dot.png", OsbOrigin.Centre);
-
-        //         sprite.PositionX.Add(0, xyposition.X);
-        //         sprite.PositionY.Add(0, xyposition.Y);
-        //         sprite.PositionZ.Add(0, zposition);
-        //         sprite.SpriteScale.Add(0, scale);
-        //         sprite.Coloring.Add(0, color);
-        //     }
-
-
-        // }
     }
 }

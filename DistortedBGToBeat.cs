@@ -39,7 +39,7 @@ namespace StorybrewScripts
             for (int i = 0; i < backSprites.Length; i++)
             {
                 backSprites[i].Additive(StartTime);
-                backSprites[i].Scale(StartTime, EndTime + 500, 0.4f, 0.4f);
+                backSprites[i].Scale(StartTime, EndTime + 500, 0.36f, 0.36f);
                 backSprites[i].Fade(StartTime, 1);
             }
 
