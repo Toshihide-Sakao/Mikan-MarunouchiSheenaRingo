@@ -1,14 +1,14 @@
 ﻿FormatVersion: 7
-Name: "DistortLines 1"
-Script: "DistortLines"
+Name: "FirstLyrics 1"
+Script: "FirstLyrics"
 Config:
   RandomSeed:
     Type: "System.Int32"
     Value: "0"
     DisplayName: "Random seed"
 Layers:
-  1e718ca500234629b7d76263d217d7f5:
+  0b34bff1e1b7423c842966071ea91075:
     Name: ""
     OsbLayer: Background
-    DiffSpecific: Yes
+    DiffSpecific: No
     Visible: Yes

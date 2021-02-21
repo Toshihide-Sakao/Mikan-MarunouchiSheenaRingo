@@ -18,6 +18,9 @@ namespace StorybrewScripts
         [Configurable]
         public double Opacity = 0.2;
 
+        [Configurable]
+        public bool sq = true;
+
         public override void Generate()
         {
             if (BackgroundPath == "") BackgroundPath = Beatmap.BackgroundPath ?? string.Empty;
@@ -25,7 +28,14 @@ namespace StorybrewScripts
 
             var bitmap = GetMapsetBitmap(BackgroundPath);
             var bg = GetLayer("").CreateSprite(BackgroundPath, OsbOrigin.Centre);
-            bg.Scale(StartTime, 854.0f / bitmap.Width);
+            if (sq)
+            {
+                bg.Scale(StartTime, 854.0f / bitmap.Width);
+            }
+            else
+            {
+                bg.Scale(StartTime, 480.0f / bitmap.Height);
+            }
             bg.Fade(StartTime - 500, StartTime, 0, Opacity);
             bg.Fade(EndTime, EndTime + 500, Opacity, 0);
         }

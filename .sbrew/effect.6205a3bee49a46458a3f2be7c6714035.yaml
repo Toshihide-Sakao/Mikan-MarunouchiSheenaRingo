@@ -14,6 +14,9 @@ Config:
   Opacity:
     Type: "System.Double"
     Value: "1"
+  sq:
+    Type: "System.Boolean"
+    Value: "True"
   RandomSeed:
     Type: "System.Int32"
     Value: "0"

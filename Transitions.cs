@@ -18,18 +18,33 @@ namespace StorybrewScripts
         public override void Generate()
         {
             var layer = GetLayer("");
-            SqTransition(layer, 30537, 32144, 3, 320, 3, Color4.White, 1/4f);
-            SqTransition(layer, 30537, 32144, 3, 320, 1, Color4.White, 1/4f);
-            
+            SqTransition(layer, 30537, 32144, 3, 320, 3, Color4.White, 1 / 4f);
+            SqTransition(layer, 30537, 32144, 3, 320, 1, Color4.White, 1 / 4f);
+
             var layer2 = GetLayer("aTrans");
-            SqTransition(layer2, 34823, 35894, 3, 320, 3, Color4.White, 1/4f);
-            SqTransition(layer2, 34823, 35894, 3, 320, 1, Color4.White, 1/4f);
+            SqTransition(layer2, 34823, 35894, 3, 320, 3, Color4.White, 1 / 4f);
+            SqTransition(layer2, 34823, 35894, 3, 320, 1, Color4.White, 1 / 4f);
 
             var layer3 = GetLayer("bruhbruh");
-            SqTransition(layer3, 39109, 40716, 3, 320, 3, colorRGB(122, 230, 185), 1/3f);
-            SqTransition(layer3, 39109, 40716, 3, 320, 1, colorRGB(122, 230, 185), 1/3f);
-            SqTransition(layer3, 39644, 40716, 3, 320, 3, colorRGB(235, 117, 117), 1/3f);
-            SqTransition(layer3, 39644, 40716, 3, 320, 1, colorRGB(235, 117, 117), 1/3f);
+            SqTransition(layer3, 39109, 40716, 3, 320, 3, colorRGB(122, 230, 185), 1 / 3f);
+            SqTransition(layer3, 39109, 40716, 3, 320, 1, colorRGB(122, 230, 185), 1 / 3f);
+            SqTransition(layer3, 39644, 40716, 3, 320, 3, colorRGB(235, 117, 117), 1 / 3f);
+            SqTransition(layer3, 39644, 40716, 3, 320, 1, colorRGB(235, 117, 117), 1 / 3f);
+
+            // bruh lolololol
+            var layer4 = GetLayer("haha burh shit hate u");
+            SqTransition(layer4, 73394, 73930, 3, 320, 3, colorRGB(168, 176, 247), 1 / 3f);
+            SqTransition(layer4, 73394, 73930, 3, 320, 1, colorRGB(168, 176, 247), 1 / 3f);
+
+            var layer5 = GetLayer("after Hahabruh");
+            SqTransition(layer5, 77680, 78216, 3, 320, 3, colorRGB(166, 161, 154), 1 / 3f);
+            SqTransition(layer5, 77680, 78216, 3, 320, 1, colorRGB(166, 161, 154), 1 / 3f);
+
+            var layer6 = GetLayer("ok after the after hahabruh");
+            SqTransition(layer5, 81966, 82501, 3, 320, 3, colorRGB(227, 152, 173), 1 / 3f);
+            SqTransition(layer5, 81966, 82501, 3, 320, 1, colorRGB(227, 152, 173), 1 / 3f);
+            SqTransition(layer5, 82501, 83037, 3, 320, 3, colorRGB(255, 255, 255), 1 / 3f);
+            SqTransition(layer5, 82501, 83037, 3, 320, 1, colorRGB(255, 255, 255), 1 / 3f);
         }
 
         void SqTransition(StoryboardLayer layer, int start, int end, int amount, float endX, int fromWhere, Color4 color, double beats)

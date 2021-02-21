@@ -53,16 +53,19 @@
   -->
   <ItemGroup>
     <Compile Include="Background.cs" />
-    <Compile Include="BallsCool.cs" />
     <Compile Include="CoolTHIngs.cs" />
+    <Compile Include="Credits.cs" />
     <Compile Include="DeleteBackground.cs" />
     <Compile Include="DistortedBGToBeat.cs" />
     <Compile Include="DistortLines.cs" />
     <Compile Include="Dna.cs" />
     <Compile Include="DScript.cs" />
     <Compile Include="DudunSaigoSabiMae.cs" />
+    <Compile Include="FirstLyrics.cs" />
     <Compile Include="HitObjectHighlight.cs" />
+    <Compile Include="ImportOsb.cs" />
     <Compile Include="Kiai3d.cs" />
+    <Compile Include="LastBgChnage.cs" />
     <Compile Include="Loading.cs" />
     <Compile Include="MovingBackground.cs" />
     <Compile Include="Particles.cs" />
@@ -71,6 +74,7 @@
     <Compile Include="SabiMae.cs" />
     <Compile Include="Seed.cs" />
     <Compile Include="Shirangana.cs" />
+    <Compile Include="SimplifiedLyrics.cs" />
     <Compile Include="Space.cs" />
     <Compile Include="Spectrum.cs" />
     <Compile Include="Transitions.cs" />

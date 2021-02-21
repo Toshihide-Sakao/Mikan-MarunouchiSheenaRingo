@@ -56,10 +56,10 @@ namespace StorybrewScripts
             var roundRect = layer.CreateSprite(roundRectPath, OsbOrigin.Centre, new Vector2(320, 500));
 
             roundRect.Color(startTime, colorRGB(167, 122, 230));
-            roundRect.Scale(startTime, 1.3f);
+            roundRect.Scale(startTime, 1.3f / 6);
             roundRect.MoveY(OsbEasing.OutQuint, startTime, startTime + beatDuration, 500, 230);
 
-            roundRect.Scale(OsbEasing.OutCubic, startTime + beatDuration, startTime + beatDuration * 5 / 4, 1.3f, 0.7f);
+            roundRect.Scale(OsbEasing.OutCubic, startTime + beatDuration, startTime + beatDuration * 5 / 4, 1.3f / 6, 0.7f / 6);
             roundRect.Rotate(OsbEasing.OutCubic, startTime + beatDuration, startTime + beatDuration * 5 / 4, MathHelper.DegreesToRadians(0), MathHelper.DegreesToRadians(-90));
             roundRect.MoveY(OsbEasing.OutQuart, startTime + beatDuration, startTime + beatDuration * 5 / 4, 230, 240);
 

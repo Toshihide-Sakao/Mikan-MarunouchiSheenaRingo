@@ -17,8 +17,9 @@ namespace StorybrewScripts
 {
     public class Space : StoryboardObjectGenerator
     {
-        public int startTime = 131251;
-        public int endTime = 137144;
+        [Configurable] public int startTime = 131251;
+        [Configurable] public int endTime = 137144;
+        [Configurable] public int easings = 0;
         public override void Generate()
         {
             var b0 = Beatmap.Bookmarks.ElementAt(0);
@@ -37,7 +38,15 @@ namespace StorybrewScripts
             camera.PositionX.Add(startTime, 0);
             camera.PositionY.Add(startTime, 0);
             camera.PositionZ.Add(startTime, -4000);
-            camera.PositionZ.Add(endTime, -10000, EasingFunctions.CircIn);
+            if (easings == 0)
+            {
+                camera.PositionZ.Add(endTime, -10000, EasingFunctions.CircIn);
+            }
+            else
+            {
+                camera.PositionZ.Add(endTime, -10000, EasingFunctions.CircOut);
+            }
+            
 
             for (int i = 0; i < 500; i++)
             {

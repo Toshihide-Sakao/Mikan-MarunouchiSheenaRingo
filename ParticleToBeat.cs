@@ -31,7 +31,7 @@ namespace StorybrewScripts
                 {
                     float opacity = Random(0.3f, 0.5f);
                     float randomX = Random(-107, 747);
-                    float randomScale = Random(0.01f, 0.04f);
+                    float randomScale = Random(0.01f * 10, 0.04f * 10);
                     float yPos = 510f;
                     var particle = layer.CreateSprite(ballPath, OsbOrigin.Centre, new Vector2(randomX, yPos));
 

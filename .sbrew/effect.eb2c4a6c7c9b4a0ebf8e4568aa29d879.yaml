@@ -1,22 +1,22 @@
 ﻿FormatVersion: 7
-Name: "Space 1"
+Name: "Space 2"
 Script: "Space"
 Config:
   startTime:
     Type: "System.Int32"
-    Value: "131251"
+    Value: "175716"
   endTime:
     Type: "System.Int32"
-    Value: "137144"
+    Value: "186430"
   easings:
     Type: "System.Int32"
-    Value: "0"
+    Value: "1"
   RandomSeed:
     Type: "System.Int32"
     Value: "0"
     DisplayName: "Random seed"
 Layers:
-  415bb6ade69745d5b8480928d4648047:
+  60de47c222c947b98f270900f4ea28cc:
     Name: ""
     OsbLayer: Background
     DiffSpecific: No

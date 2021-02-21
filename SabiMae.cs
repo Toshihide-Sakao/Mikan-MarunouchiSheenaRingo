@@ -98,7 +98,7 @@ namespace StorybrewScripts
 
             var roundRect = layer.CreateSprite(roundRectPath, OsbOrigin.Centre);
 
-            roundRect.Scale(OsbEasing.OutElastic, startTime + beatDuration * 6, startTime + beatDuration * 6 + beatDuration * 3 / 4, 0.1f, 0.5f);
+            roundRect.Scale(OsbEasing.OutElastic, startTime + beatDuration * 6, startTime + beatDuration * 6 + beatDuration * 3 / 4, 0.1f / 6, 0.5f / 6);
             roundRect.Rotate(OsbEasing.InBack, startTime + beatDuration * 6, startTime + beatDuration * 8, MathHelper.DegreesToRadians(0), MathHelper.DegreesToRadians(360));
 
 
@@ -273,13 +273,14 @@ namespace StorybrewScripts
 
             for (int i = 0; i < circle.Length; i++)
             {
+                float scalee = 0.32f - (0.1f * i);
                 circle[i] = layer.CreateSprite(circlePath, OsbOrigin.Centre);
 
                 circle[i].Color(startTime, 45001, colorRGB(41, 41, 41), colorRGB(41, 41, 41));
-                circle[i].Scale(OsbEasing.OutBack, startTime, startTime + beatDuration, 0, 0.8f - (0.1f * i));
+                circle[i].Scale(OsbEasing.OutBack, startTime, startTime + beatDuration, 0, scalee);
 
-                circle[i].Scale(OsbEasing.OutBack, startTime + beatDuration * (4 + 0.25f * i), startTime + beatDuration * (4.5f + 0.25f * i), 0.8f - (0.1f * i), (0.8f - (0.1f * i)) * 1.6f);
-                circle[i].Scale(OsbEasing.In, startTime + beatDuration * (4.25f + 7 * 0.25f), startTime + beatDuration * (4.25f + 7 * 0.25f + 1f), (0.8f - (0.1f * i)) * 1.6f, 0);
+                circle[i].Scale(OsbEasing.OutBack, startTime + beatDuration * (4 + 0.25f * i), startTime + beatDuration * (4.5f + 0.25f * i), scalee, scalee * 1.6f);
+                circle[i].Scale(OsbEasing.In, startTime + beatDuration * (4.25f + 7 * 0.25f), startTime + beatDuration * (4.25f + 7 * 0.25f + 1f), scalee * 1.6f, 0);
 
             }
 
