@@ -81,10 +81,12 @@ namespace StorybrewScripts
 
 
             }
-
-            var white = backLayer.CreateSprite(dotPat, OsbOrigin.Centre);
-            white.ScaleVec(130716, 131251, 854, 480, 854, 480);
-            white.Fade(OsbEasing.InQuad, 130716, 131251, 0, 1);
+            var flLayer = GetLayer("sdsd");
+            var white = flLayer.CreateSprite(dotPat, OsbOrigin.Centre);
+            white.ScaleVec(129644, 130716, 854, 480, 854, 480);
+            white.Fade(OsbEasing.InQuad, 129644, 130716, 0, 1);
+            white.Fade(131251, 131519, 1, 0);
+            white.Color(OsbEasing.Out, 130716, 131251, Color4.White, Color4.Black);
         }
 
         OsbSprite[] CreateOverEye()

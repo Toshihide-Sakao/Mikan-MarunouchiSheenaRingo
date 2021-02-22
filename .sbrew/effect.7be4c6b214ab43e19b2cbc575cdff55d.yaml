@@ -12,3 +12,8 @@ Layers:
     OsbLayer: Background
     DiffSpecific: No
     Visible: Yes
+  c1278da5210c4d79b9e08d2c213ca108:
+    Name: "sdsd"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
